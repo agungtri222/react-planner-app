@@ -9,7 +9,7 @@ const WeatherWidget = () => {
     const fetchWeatherData = async () => {
       try {
         const apiKey = process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
-        const url = `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=${apiKey}`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=${apiKey}`;
         const response = await fetch(url);
         const data = await response.json();
         setCity(data.main);
